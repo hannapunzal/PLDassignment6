@@ -22,3 +22,23 @@ def userAns():
     userAns = int(input("Enter answer: "))
     return randAns == userAns
 # ask 10 questions and display the score summary
+def userAsk():
+    name = input("Hi! Enter your name to proceed: ")
+    time.sleep(1)
+    print(f"Hi {name}! You are going to answer 10 random addition questions. Let's get you started! ☺")
+    currentScore = 0
+    for i in range(10):
+        rightAns = userAns()
+        if rightAns:
+            currentScore += 1
+            print(f"Congratulations, {name}! You got the correct answer!")      
+        else:
+            currentScore = currentScore    
+            print(f"Sorry, the correct answer is {randAns}.") 
+    time.sleep(1)
+    print("Calculating final score...")
+    time.sleep(2)
+    print(f"{name}, your final score is {currentScore}/10. Hope to see you again next time! ♥")
+    input("End")
+
+userAsk()
