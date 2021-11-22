@@ -15,4 +15,10 @@ def randAdd():
     print(f"What will be the sum if {firstNum} is added to {secondNum}?")
     return randAns
 # evaluate if the user has the correct answer
+def userAns():
+    global randAns
+    randAns = randAdd()
+    time.sleep(1)
+    userAns = int(input("Enter answer: "))
+    return randAns == userAns
 # ask 10 questions and display the score summary
