@@ -39,6 +39,6 @@ def userAsk():
     print("Calculating final score...")
     time.sleep(2)
     print(f"{name}, your final score is {currentScore}/10. Hope to see you again next time! ♥")
-    input("End")
+    print("End")
 
 userAsk()
