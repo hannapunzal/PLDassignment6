@@ -38,7 +38,13 @@ def userAsk():
     time.sleep(1)
     print("Calculating final score...")
     time.sleep(2)
-    print(f"{name}, your final score is {currentScore}/10. Hope to see you again next time! ♥")
+    if currentScore >=7:
+        print(f"{name}, your final score is {currentScore}/10. That's great! \nHope to see you again next time! ♥")
+    if currentScore >=5 and currentScore <7:
+        print(f"{name}, your final score is {currentScore}/10. Not bad! \nHope to see you again next time! ♥")
+    if currentScore <5:
+        print(f"{name}, your final score is {currentScore}/10. Nice try! Your arithmetic skills need improvement though... \nHope to see you again next time! ♥")
+    
     print("End")
 
 userAsk()
